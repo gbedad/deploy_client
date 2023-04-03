@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react";
 import logo from "./logo.svg";
 import "./App.css";
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 function App() {
   const [data, setData] = useState(null);
   const [name, setName] = useState(null);
-  
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
   const send = () => {
    if(name){
     fetch(`${BASE_URL}/api/${name}`)
